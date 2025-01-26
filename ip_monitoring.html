@@ -116,101 +116,131 @@
     </div>
 
     <!-- Traffic Statistics -->
-    <div class="block">
-        <h3>Traffic Statistics</h3>
-        <p>Overview of traffic flow across subnets:</p>
-        <ul class="list-group">
-            <li class="list-group-item">Subnet: {{ traffic.subnet }} - Traffic: {{ traffic.traffic }} MB</li>
-        </ul>
-    </div>
-
-    <!-- Interface Load -->
-    <div class="block">
-        <h3>Interface Load</h3>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Interface</th>
-                    <th>Load (%)</th>
-                    <th>TX (Mbps)</th>
-                    <th>RX (Mbps)</th>
-                    <th>Errors</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>eth0</td>
-                    <td>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" style="width: 90%;">90%</div>
-                        </div>
-                    </td>
-                    <td>500</td>
-                    <td>400</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>wlan0</td>
-                    <td>
-                        <div class="progress">
-                            <div class="progress-bar bg-warning" style="width: 50%;">50%</div>
-                        </div>
-                    </td>
-                    <td>200</td>
-                    <td>180</td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td>eth1</td>
-                    <td>
-                        <div class="progress">
-                            <div class="progress-bar bg-success" style="width: 30%;">30%</div>
-                        </div>
-                    </td>
-                    <td>100</td>
-                    <td>90</td>
-                    <td>1</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <!-- Subnet Utilization Chart -->
-    <div class="block">
-        <h3>Subnet Utilization Chart</h3>
-        <table class="table table-bordered">
+   <div class="block">
+        <h3>Traffic Overview</h3>
+        <table class="table table-bordered table-striped">
             <thead>
             <tr>
                 <th>Subnet</th>
-                <th>Utilization (%)</th>
-                <th>Available IPs</th>
+                <th>Total Traffic (MB)</th>
+                <th>Breakdown</th>
+                <th>Details</th>
             </tr>
             </thead>
             <tbody>
             <tr>
                 <td>192.168.1.0/24</td>
-                <td>80%</td>
-                <td>50</td>
+                <td>500</td>
+                <td>
+                    <ul>
+                        <li>HTTP: 200 MB</li>
+                        <li>HTTPS: 150 MB</li>
+                        <li>DNS: 100 MB</li>
+                        <li>FTP: 50 MB</li>
+                    </ul>
+                </td>
+                <td><a href="/subnet_traffic_details_192_168_1_0.html" class="btn btn-link">View Details</a></td>
             </tr>
             <tr>
                 <td>192.168.2.0/24</td>
-                <td>60%</td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>192.168.3.0/24</td>
-                <td>30%</td>
-                <td>175</td>
-            </tr>
-            <tr>
-                <td>192.168.4.0/24</td>
-                <td>50%</td>
-                <td>128</td>
+                <td>300</td>
+                <td>
+                    <ul>
+                        <li>HTTP: 120 MB</li>
+                        <li>HTTPS: 80 MB</li>
+                        <li>DNS: 60 MB</li>
+                        <li>FTP: 40 MB</li>
+                    </ul>
+                </td>
+                <td><a href="/subnet_traffic_details_192_168_2_0.html" class="btn btn-link">View Details</a></td>
             </tr>
             </tbody>
         </table>
     </div>
+    <div class="block">
+        <h3>Traffic Trends</h3>
+        <canvas id="trafficTrendsChart" width="400" height="200"></canvas>
+    </div>
+    <div class="block">
+        <h3>Anomalies and Alerts</h3>
+        <p>Detected anomalies in traffic patterns:</p>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-danger">
+                <strong>Alert:</strong> Sudden spike in traffic on subnet 192.168.1.0/24 (1 GB in last hour).
+            </li>
+            <li class="list-group-item list-group-item-warning">
+                <strong>Warning:</strong> Unusual increase in DNS traffic on subnet 192.168.2.0/24 (200 MB).
+            </li>
+            <li class="list-group-item list-group-item-success">
+                <strong>Status:</strong> No issues detected in subnet 192.168.3.0/24.
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="footer">
+    &copy; 2025 OneLIR. All rights reserved.
+</div>
 
+<script>
+    // Example data for traffic trends with problematic spikes
+    const trafficTrendsData = {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [
+            {
+                label: '192.168.1.0/24 (Normal Traffic)',
+                data: [100, 200, 150, 300, 250, 400, 500],
+                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                fill: true,
+                tension: 0.4
+            },
+            {
+                label: '192.168.2.0/24 (Problematic Traffic)',
+                data: [50, 80, 100, 500, 1200, 200, 300], // Simulating spikes
+                borderColor: 'rgba(255, 0, 0, 1)',
+                backgroundColor: 'rgba(255, 0, 0, 0.2)',
+                fill: true,
+                tension: 0.4
+            }
+        ]
+    };
+
+    const config = {
+        type: 'line',
+        data: trafficTrendsData,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                title: {
+                    display: true,
+                    text: 'Traffic Trends Over Time'
+                }
+            },
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Month'
+                    }
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Traffic (MB)'
+                    }
+                }
+            }
+        }
+    };
+
+    const trafficTrendsChart = new Chart(
+        document.getElementById('trafficTrendsChart'),
+        config
+    );
+</script>
     <!-- Data Collection -->
     <div class="block">
         <h3>Data Collection</h3>
