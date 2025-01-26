@@ -1,0 +1,2444 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subnet Details - 192.168.4.0/24</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+        }
+
+        .block {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .block h3 {
+            margin-bottom: 15px;
+        }
+
+        table {
+            font-size: 14px;
+        }
+
+        .action-buttons {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Subnet Details - 192.168.4.0/24</h1>
+    <p>Detailed information about each IP address in the subnet.</p>
+</div>
+<div class="container">
+    <div class="block">
+        <h3>IP Address Usage</h3>
+        <div class="mb-3">
+            <label for="filter" class="form-label">Filter by Status:</label>
+            <select id="filter" class="form-select" onchange="filterTable()">
+                <option value="all">Show All</option>
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+        </div>
+        <form id="ip-management-form">
+            <table class="table table-bordered table-striped" id="ip-table">
+                <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>IP Address</th>
+                    <th>Status</th>
+                    <th>Last Used</th>
+                    <th>Device/Service</th>
+                    <th>Port</th>
+                </tr>
+                </thead>
+                <tbody>
+                
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.0"></td>
+        <td>192.168.4.0</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.1"></td>
+        <td>192.168.4.1</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.2"></td>
+        <td>192.168.4.2</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.3"></td>
+        <td>192.168.4.3</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.4"></td>
+        <td>192.168.4.4</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.5"></td>
+        <td>192.168.4.5</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.6"></td>
+        <td>192.168.4.6</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.7"></td>
+        <td>192.168.4.7</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.8"></td>
+        <td>192.168.4.8</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.9"></td>
+        <td>192.168.4.9</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.10"></td>
+        <td>192.168.4.10</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.11"></td>
+        <td>192.168.4.11</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.12"></td>
+        <td>192.168.4.12</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.13"></td>
+        <td>192.168.4.13</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.14"></td>
+        <td>192.168.4.14</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.15"></td>
+        <td>192.168.4.15</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.16"></td>
+        <td>192.168.4.16</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.17"></td>
+        <td>192.168.4.17</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.18"></td>
+        <td>192.168.4.18</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.19"></td>
+        <td>192.168.4.19</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.20"></td>
+        <td>192.168.4.20</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.21"></td>
+        <td>192.168.4.21</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.22"></td>
+        <td>192.168.4.22</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.23"></td>
+        <td>192.168.4.23</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.24"></td>
+        <td>192.168.4.24</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.25"></td>
+        <td>192.168.4.25</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.26"></td>
+        <td>192.168.4.26</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.27"></td>
+        <td>192.168.4.27</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.28"></td>
+        <td>192.168.4.28</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.29"></td>
+        <td>192.168.4.29</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.30"></td>
+        <td>192.168.4.30</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.31"></td>
+        <td>192.168.4.31</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.32"></td>
+        <td>192.168.4.32</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.33"></td>
+        <td>192.168.4.33</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.34"></td>
+        <td>192.168.4.34</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.35"></td>
+        <td>192.168.4.35</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.36"></td>
+        <td>192.168.4.36</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.37"></td>
+        <td>192.168.4.37</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.38"></td>
+        <td>192.168.4.38</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.39"></td>
+        <td>192.168.4.39</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.40"></td>
+        <td>192.168.4.40</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.41"></td>
+        <td>192.168.4.41</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.42"></td>
+        <td>192.168.4.42</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.43"></td>
+        <td>192.168.4.43</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.44"></td>
+        <td>192.168.4.44</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.45"></td>
+        <td>192.168.4.45</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.46"></td>
+        <td>192.168.4.46</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.47"></td>
+        <td>192.168.4.47</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.48"></td>
+        <td>192.168.4.48</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.49"></td>
+        <td>192.168.4.49</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.50"></td>
+        <td>192.168.4.50</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.51"></td>
+        <td>192.168.4.51</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.52"></td>
+        <td>192.168.4.52</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.53"></td>
+        <td>192.168.4.53</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.54"></td>
+        <td>192.168.4.54</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.55"></td>
+        <td>192.168.4.55</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.56"></td>
+        <td>192.168.4.56</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.57"></td>
+        <td>192.168.4.57</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.58"></td>
+        <td>192.168.4.58</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.59"></td>
+        <td>192.168.4.59</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.60"></td>
+        <td>192.168.4.60</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.61"></td>
+        <td>192.168.4.61</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.62"></td>
+        <td>192.168.4.62</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.63"></td>
+        <td>192.168.4.63</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.64"></td>
+        <td>192.168.4.64</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.65"></td>
+        <td>192.168.4.65</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.66"></td>
+        <td>192.168.4.66</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.67"></td>
+        <td>192.168.4.67</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.68"></td>
+        <td>192.168.4.68</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.69"></td>
+        <td>192.168.4.69</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.70"></td>
+        <td>192.168.4.70</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.71"></td>
+        <td>192.168.4.71</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.72"></td>
+        <td>192.168.4.72</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.73"></td>
+        <td>192.168.4.73</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.74"></td>
+        <td>192.168.4.74</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.75"></td>
+        <td>192.168.4.75</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.76"></td>
+        <td>192.168.4.76</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.77"></td>
+        <td>192.168.4.77</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.78"></td>
+        <td>192.168.4.78</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.79"></td>
+        <td>192.168.4.79</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.80"></td>
+        <td>192.168.4.80</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.81"></td>
+        <td>192.168.4.81</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.82"></td>
+        <td>192.168.4.82</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.83"></td>
+        <td>192.168.4.83</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.84"></td>
+        <td>192.168.4.84</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.85"></td>
+        <td>192.168.4.85</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.86"></td>
+        <td>192.168.4.86</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.87"></td>
+        <td>192.168.4.87</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.88"></td>
+        <td>192.168.4.88</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.89"></td>
+        <td>192.168.4.89</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.90"></td>
+        <td>192.168.4.90</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.91"></td>
+        <td>192.168.4.91</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.92"></td>
+        <td>192.168.4.92</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.93"></td>
+        <td>192.168.4.93</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.94"></td>
+        <td>192.168.4.94</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.95"></td>
+        <td>192.168.4.95</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.96"></td>
+        <td>192.168.4.96</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.97"></td>
+        <td>192.168.4.97</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.98"></td>
+        <td>192.168.4.98</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.99"></td>
+        <td>192.168.4.99</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.100"></td>
+        <td>192.168.4.100</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.101"></td>
+        <td>192.168.4.101</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.102"></td>
+        <td>192.168.4.102</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.103"></td>
+        <td>192.168.4.103</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.104"></td>
+        <td>192.168.4.104</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.105"></td>
+        <td>192.168.4.105</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.106"></td>
+        <td>192.168.4.106</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.107"></td>
+        <td>192.168.4.107</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.108"></td>
+        <td>192.168.4.108</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.109"></td>
+        <td>192.168.4.109</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.110"></td>
+        <td>192.168.4.110</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.111"></td>
+        <td>192.168.4.111</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.112"></td>
+        <td>192.168.4.112</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.113"></td>
+        <td>192.168.4.113</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.114"></td>
+        <td>192.168.4.114</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.115"></td>
+        <td>192.168.4.115</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.116"></td>
+        <td>192.168.4.116</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.117"></td>
+        <td>192.168.4.117</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.118"></td>
+        <td>192.168.4.118</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.119"></td>
+        <td>192.168.4.119</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.120"></td>
+        <td>192.168.4.120</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.121"></td>
+        <td>192.168.4.121</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.122"></td>
+        <td>192.168.4.122</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.123"></td>
+        <td>192.168.4.123</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.124"></td>
+        <td>192.168.4.124</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.125"></td>
+        <td>192.168.4.125</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.126"></td>
+        <td>192.168.4.126</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.127"></td>
+        <td>192.168.4.127</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.128"></td>
+        <td>192.168.4.128</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.129"></td>
+        <td>192.168.4.129</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.130"></td>
+        <td>192.168.4.130</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.131"></td>
+        <td>192.168.4.131</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.132"></td>
+        <td>192.168.4.132</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.133"></td>
+        <td>192.168.4.133</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.134"></td>
+        <td>192.168.4.134</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.135"></td>
+        <td>192.168.4.135</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.136"></td>
+        <td>192.168.4.136</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.137"></td>
+        <td>192.168.4.137</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.138"></td>
+        <td>192.168.4.138</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.139"></td>
+        <td>192.168.4.139</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.140"></td>
+        <td>192.168.4.140</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.141"></td>
+        <td>192.168.4.141</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.142"></td>
+        <td>192.168.4.142</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.143"></td>
+        <td>192.168.4.143</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.144"></td>
+        <td>192.168.4.144</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.145"></td>
+        <td>192.168.4.145</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.146"></td>
+        <td>192.168.4.146</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.147"></td>
+        <td>192.168.4.147</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.148"></td>
+        <td>192.168.4.148</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.149"></td>
+        <td>192.168.4.149</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.150"></td>
+        <td>192.168.4.150</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.151"></td>
+        <td>192.168.4.151</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.152"></td>
+        <td>192.168.4.152</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.153"></td>
+        <td>192.168.4.153</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.154"></td>
+        <td>192.168.4.154</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.155"></td>
+        <td>192.168.4.155</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.156"></td>
+        <td>192.168.4.156</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.157"></td>
+        <td>192.168.4.157</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.158"></td>
+        <td>192.168.4.158</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.159"></td>
+        <td>192.168.4.159</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.160"></td>
+        <td>192.168.4.160</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.161"></td>
+        <td>192.168.4.161</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.162"></td>
+        <td>192.168.4.162</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.163"></td>
+        <td>192.168.4.163</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.164"></td>
+        <td>192.168.4.164</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.165"></td>
+        <td>192.168.4.165</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.166"></td>
+        <td>192.168.4.166</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.167"></td>
+        <td>192.168.4.167</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.168"></td>
+        <td>192.168.4.168</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.169"></td>
+        <td>192.168.4.169</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.170"></td>
+        <td>192.168.4.170</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.171"></td>
+        <td>192.168.4.171</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.172"></td>
+        <td>192.168.4.172</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.173"></td>
+        <td>192.168.4.173</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.174"></td>
+        <td>192.168.4.174</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.175"></td>
+        <td>192.168.4.175</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.176"></td>
+        <td>192.168.4.176</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.177"></td>
+        <td>192.168.4.177</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.178"></td>
+        <td>192.168.4.178</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.179"></td>
+        <td>192.168.4.179</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.180"></td>
+        <td>192.168.4.180</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.181"></td>
+        <td>192.168.4.181</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.182"></td>
+        <td>192.168.4.182</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.183"></td>
+        <td>192.168.4.183</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.184"></td>
+        <td>192.168.4.184</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.185"></td>
+        <td>192.168.4.185</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.186"></td>
+        <td>192.168.4.186</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.187"></td>
+        <td>192.168.4.187</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.188"></td>
+        <td>192.168.4.188</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.189"></td>
+        <td>192.168.4.189</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.190"></td>
+        <td>192.168.4.190</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.191"></td>
+        <td>192.168.4.191</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.192"></td>
+        <td>192.168.4.192</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.193"></td>
+        <td>192.168.4.193</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.194"></td>
+        <td>192.168.4.194</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.195"></td>
+        <td>192.168.4.195</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.196"></td>
+        <td>192.168.4.196</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.197"></td>
+        <td>192.168.4.197</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.198"></td>
+        <td>192.168.4.198</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.199"></td>
+        <td>192.168.4.199</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.200"></td>
+        <td>192.168.4.200</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.201"></td>
+        <td>192.168.4.201</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.202"></td>
+        <td>192.168.4.202</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.203"></td>
+        <td>192.168.4.203</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.204"></td>
+        <td>192.168.4.204</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.205"></td>
+        <td>192.168.4.205</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.206"></td>
+        <td>192.168.4.206</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.207"></td>
+        <td>192.168.4.207</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.208"></td>
+        <td>192.168.4.208</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.209"></td>
+        <td>192.168.4.209</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.210"></td>
+        <td>192.168.4.210</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.211"></td>
+        <td>192.168.4.211</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.212"></td>
+        <td>192.168.4.212</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.213"></td>
+        <td>192.168.4.213</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.214"></td>
+        <td>192.168.4.214</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.215"></td>
+        <td>192.168.4.215</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.216"></td>
+        <td>192.168.4.216</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.217"></td>
+        <td>192.168.4.217</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.218"></td>
+        <td>192.168.4.218</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.219"></td>
+        <td>192.168.4.219</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.220"></td>
+        <td>192.168.4.220</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.221"></td>
+        <td>192.168.4.221</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.222"></td>
+        <td>192.168.4.222</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.223"></td>
+        <td>192.168.4.223</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.224"></td>
+        <td>192.168.4.224</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.225"></td>
+        <td>192.168.4.225</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.226"></td>
+        <td>192.168.4.226</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.227"></td>
+        <td>192.168.4.227</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.228"></td>
+        <td>192.168.4.228</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.229"></td>
+        <td>192.168.4.229</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.230"></td>
+        <td>192.168.4.230</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.231"></td>
+        <td>192.168.4.231</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.232"></td>
+        <td>192.168.4.232</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.233"></td>
+        <td>192.168.4.233</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.234"></td>
+        <td>192.168.4.234</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.235"></td>
+        <td>192.168.4.235</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.236"></td>
+        <td>192.168.4.236</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.237"></td>
+        <td>192.168.4.237</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.238"></td>
+        <td>192.168.4.238</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.239"></td>
+        <td>192.168.4.239</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.240"></td>
+        <td>192.168.4.240</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.241"></td>
+        <td>192.168.4.241</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.242"></td>
+        <td>192.168.4.242</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.243"></td>
+        <td>192.168.4.243</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.244"></td>
+        <td>192.168.4.244</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.245"></td>
+        <td>192.168.4.245</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.246"></td>
+        <td>192.168.4.246</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.247"></td>
+        <td>192.168.4.247</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.248"></td>
+        <td>192.168.4.248</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.249"></td>
+        <td>192.168.4.249</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.250"></td>
+        <td>192.168.4.250</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.251"></td>
+        <td>192.168.4.251</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.252"></td>
+        <td>192.168.4.252</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.253"></td>
+        <td>192.168.4.253</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.254"></td>
+        <td>192.168.4.254</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+    <tr style="background-color: #d4edda;">
+        <td><input type="checkbox" name="ip-select" value="192.168.4.255"></td>
+        <td>192.168.4.255</td>
+        <td>Inactive</td>
+        <td>-</td>
+        <td>Available</td>
+        <td>-</td>
+    </tr>
+    
+                </tbody>
+            </table>
+            <div class="action-buttons">
+                <button type="button" class="btn btn-primary" onclick="releaseIPs()">Release Selected</button>
+                <button type="button" class="btn btn-warning" onclick="reassignIPs()">Reassign Selected</button>
+                <button type="button" class="btn btn-danger" onclick="blockIPs()">Block Selected</button>
+                <button type="button" class="btn btn-success" onclick="generateReport()">Generate Report</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="footer">
+    &copy; 2025 OneLIR. All rights reserved.
+</div>
+
+<script>
+    function releaseIPs() {
+        const selectedIPs = Array.from(document.querySelectorAll('input[name="ip-select"]:checked'))
+            .map(cb => cb.value);
+        alert("Releasing IPs: " + selectedIPs.join(", "));
+    }
+
+    function reassignIPs() {
+        const selectedIPs = Array.from(document.querySelectorAll('input[name="ip-select"]:checked'))
+            .map(cb => cb.value);
+        alert("Reassigning IPs: " + selectedIPs.join(", "));
+    }
+
+    function blockIPs() {
+        const selectedIPs = Array.from(document.querySelectorAll('input[name="ip-select"]:checked'))
+            .map(cb => cb.value);
+        alert("Blocking IPs: " + selectedIPs.join(", "));
+    }
+
+    function generateReport() {
+        const selectedIPs = Array.from(document.querySelectorAll('input[name="ip-select"]:checked'))
+            .map(cb => cb.value);
+        alert("Generating report for IPs: " + selectedIPs.join(", "));
+    }
+
+    function filterTable() {
+        const filterValue = document.getElementById("filter").value;
+        const rows = document.querySelectorAll("#ip-table tbody tr");
+        rows.forEach(row => {
+            const status = row.cells[2].innerText.toLowerCase();
+            if (filterValue === "all" || status === filterValue) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+    }
+</script>
+</body>
+</html>
