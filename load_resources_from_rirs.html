@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Load Resources from RIRs</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .header {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      margin-top: 20px;
+    }
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      background-color: #343a40;
+      color: white;
+      padding: 10px;
+    }
+    .block {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .block h3 {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <h1>Load Resources from Regional Internet Registries</h1>
+  <p>Select an RIR and proceed to load resource data.</p>
+</div>
+<div class="container">
+  <div class="block">
+    <h3>Select a Regional Internet Registry</h3>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <strong>RIPE NCC</strong>
+        <p>Responsible for Europe, the Middle East, and parts of Central Asia.</p>
+        <a href="load_subnets_from_ripe_ncc.html" class="btn btn-primary">Load from RIPE NCC</a>
+      </li>
+      <li class="list-group-item">
+        <strong>ARIN</strong>
+        <p>Responsible for the United States, Canada, and parts of the Caribbean.</p>
+        <a href="load_subnets_from_arin.html" class="btn btn-primary">Load from ARIN</a>
+      </li>
+      <li class="list-group-item">
+        <strong>APNIC</strong>
+        <p>Responsible for Asia, Australia, and the Pacific region.</p>
+        <a href="load_subnets_from_apnic.html" class="btn btn-primary">Load from APNIC</a>
+      </li>
+      <li class="list-group-item">
+        <strong>AFRINIC</strong>
+        <p>Responsible for Africa.</p>
+        <a href="load_subnets_from_afrinic.html" class="btn btn-primary">Load from AFRINIC</a>
+      </li>
+      <li class="list-group-item">
+        <strong>LACNIC</strong>
+        <p>Responsible for Latin America and parts of the Caribbean.</p>
+        <a href="load_subnets_from_lacnic.html" class="btn btn-primary">Load from LACNIC</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="footer">
+  &copy; 2025 OneLIR. All rights reserved.
+</div>
+</body>
+</html>
