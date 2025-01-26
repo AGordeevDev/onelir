@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Load Subnets from RIPE NCC</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .header {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      margin-top: 20px;
+    }
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      background-color: #343a40;
+      color: white;
+      padding: 10px;
+    }
+    .block {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .block h3 {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <h1>Load and Manage Subnets</h1>
+  <p>Fetch data from RIPE NCC or add subnets manually.</p>
+</div>
+<div class="container">
+  <!-- API Key Input Section -->
+  <div class="block">
+    <h3>Enter RIPE NCC API Key</h3>
+    <form id="ripeNccForm">
+      <div class="mb-3">
+        <label for="apiKey" class="form-label">API Key</label>
+        <input type="text" class="form-control" id="apiKey" placeholder="Enter your RIPE NCC API key" required>
+      </div>
+      <div class="mb-3">
+        <label for="orgHandle" class="form-label">Organization Handle</label>
+        <input type="text" class="form-control" id="orgHandle" placeholder="Enter your Organization Handle (e.g., ORG-XYZ-RIPE)" required>
+      </div>
+      <button type="button" class="btn btn-primary" id="fetchSubnets">Fetch Subnets</button>
+    </form>
+  </div>
+
+  <!-- Results Section -->
+  <div class="block" id="resultsBlock" style="display:none;">
+    <h3>Fetched Subnets</h3>
+    <ul class="list-group" id="subnetList"></ul>
+  </div>
+
+  <!-- Manual Add Section -->
+  <div class="block">
+    <h3>Add Subnets Manually</h3>
+    <form id="manualAddForm">
+      <div class="mb-3">
+        <label for="manualSubnet" class="form-label">Subnet</label>
+        <input type="text" class="form-control" id="manualSubnet" placeholder="Enter subnet (e.g., 192.168.1.0/24)" required>
+      </div>
+      <div class="mb-3">
+        <label for="manualDescription" class="form-label">Description</label>
+        <input type="text" class="form-control" id="manualDescription" placeholder="Enter a description (optional)">
+      </div>
+      <button type="button" class="btn btn-primary" id="addSubnet">Add Subnet</button>
+    </form>
+  </div>
+
+  <!-- Added Subnets Table -->
+  <div class="block">
+    <h3>Added Subnets</h3>
+    <table class="table table-bordered" id="addedSubnetsTable">
+      <thead>
+        <tr>
+          <th>Subnet</th>
+          <th>Description</th>
+          <th>Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Subnets added manually or fetched will appear here -->
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="footer">
+  &copy; 2025 OneLIR. All rights reserved.
+</div>
+
+<script>
+  document.getElementById("fetchSubnets").addEventListener("click", function() {
+    const apiKey = document.getElementById("apiKey").value;
+    const orgHandle = document.getElementById("orgHandle").value;
+
+    if (!apiKey || !orgHandle) {
+      alert("Please provide both API Key and Organization Handle.");
+      return;
+    }
+
+    const url = "http://127.0.0.1:5000/fetch-subnets";
+
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ apiKey, orgHandle })
+    })
+    .then(response => response.json())
+    .then(data => {
+      const subnetList = document.getElementById("subnetList");
+      const addedSubnetsTable = document.getElementById("addedSubnetsTable").querySelector("tbody");
+      subnetList.innerHTML = "";
+
+      if (data.error) {
+        alert(`Error: ${data.error}`);
+        return;
+      }
+
+      const objects = data.whoisResources?.objects?.object || [];
+      objects.forEach(obj => {
+        if (obj.type === "inetnum") {
+          const inetnum = obj["primary-key"]?.attribute?.find(attr => attr.name === "inetnum")?.value || "Unknown";
+          const description = obj.attributes?.attribute?.find(attr => attr.name === "descr")?.value || "No description";
+          const listItem = `<li class="list-group-item"><strong>${inetnum}</strong> - ${description}</li>`;
+          const tableRow = `<tr><td>${inetnum}</td><td>${description}</td><td>RIPE NCC</td></tr>`;
+          subnetList.innerHTML += listItem;
+          addedSubnetsTable.innerHTML += tableRow;
+        }
+      });
+
+      document.getElementById("resultsBlock").style.display = "block";
+    })
+    .catch(error => {
+      alert(`Failed to fetch subnets: ${error.message}`);
+    });
+  });
+
+  document.getElementById("addSubnet").addEventListener("click", function() {
+    const manualSubnet = document.getElementById("manualSubnet").value;
+    const manualDescription = document.getElementById("manualDescription").value || "No description";
+    const addedSubnetsTable = document.getElementById("addedSubnetsTable").querySelector("tbody");
+
+    if (!manualSubnet) {
+      alert("Please enter a valid subnet.");
+      return;
+    }
+
+    const tableRow = `<tr><td>${manualSubnet}</td><td>${manualDescription}</td><td>Manual</td></tr>`;
+    addedSubnetsTable.innerHTML += tableRow;
+
+    document.getElementById("manualAddForm").reset();
+  });
+</script>
+</body>
+</html>
