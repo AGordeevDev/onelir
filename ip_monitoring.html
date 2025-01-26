@@ -42,6 +42,17 @@
         .block h3 {
             margin-bottom: 15px;
         }
+
+        .progress {
+            height: 20px;
+        }
+
+        .progress-bar {
+            text-align: left;
+            padding-left: 10px;
+            color: black;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -58,7 +69,6 @@
         </ol>
     </nav>
 
-         
     <div class="block">
         <h3>Monitoring Dashboard</h3>
         <table class="table table-striped">
@@ -98,6 +108,7 @@
             </tbody>
         </table>
     </div>
+
     <!-- Traffic Statistics -->
     <div class="block">
         <h3>Traffic Statistics</h3>
@@ -110,10 +121,52 @@
     <!-- Interface Load -->
     <div class="block">
         <h3>Interface Load</h3>
-        <p>Monitor the load on network interfaces:</p>
-        <ul class="list-group">
-            <li class="list-group-item">Interface: {{ interface.name }} - Load: {{ interface.load }}%</li>
-        </ul>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Interface</th>
+                    <th>Load (%)</th>
+                    <th>TX (Mbps)</th>
+                    <th>RX (Mbps)</th>
+                    <th>Errors</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>eth0</td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" style="width: 90%;">90%</div>
+                        </div>
+                    </td>
+                    <td>500</td>
+                    <td>400</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>wlan0</td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" style="width: 50%;">50%</div>
+                        </div>
+                    </td>
+                    <td>200</td>
+                    <td>180</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>eth1</td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 30%;">30%</div>
+                        </div>
+                    </td>
+                    <td>100</td>
+                    <td>90</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <!-- Subnet Utilization Chart -->
