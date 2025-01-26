@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Renumbering Plan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+        }
+
+        .block {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .block h3 {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Generate Renumbering Plan</h1>
+    <p>Optimize your IP address ranges and free /24 blocks efficiently.</p>
+</div>
+<div class="container">
+    <!-- Analyze Current Ranges -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/ip_optimization_with_revenue.html">IP Optimization</a></li>
+            <li class="breadcrumb-item"><a href="/renumbering_module.html">Renumbering Module</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Generate Renumbering Plan</li>
+        </ol>
+    </nav>
+    <div class="block">
+        <h3>Step 1: Analyze Current Ranges</h3>
+        <p>Detailed analysis of your IP ranges:</p>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Range</th>
+                <th>Utilization (%)</th>
+                <th>Addresses in Use</th>
+                <th>Status</th>
+                <th>Details</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>192.168.1.0/25</td>
+                <td>80%</td>
+                <td>120</td>
+                <td>Partially Filled</td>
+                <td><a href="/ip_utilization_details_separated.html" class="btn btn-link">View Details</a></td>
+            </tr>
+            <tr>
+                <td>192.168.1.128/25</td>
+                <td>50%</td>
+                <td>64</td>
+                <td>Partially Filled</td>
+                <td><a href="/ip_utilization_details_separated.html" class="btn btn-link">View Details</a></td>
+            </tr>
+            <tr>
+                <td>192.168.2.0/24</td>
+                <td>10%</td>
+                <td>26</td>
+                <td>Fragmented</td>
+                <td><a href="/ip_utilization_details_separated.html" class="btn btn-link">View Details</a></td>
+            </tr>
+            <tr>
+                <td>192.168.3.0/24</td>
+                <td>0%</td>
+                <td>0</td>
+                <td>Empty</td>
+                <td><a href="/ip_utilization_details_separated.html" class="btn btn-link">View Details</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Proposed Renumbering Actions -->
+    <div class="block">
+        <h3>Step 2: Proposed Renumbering Actions</h3>
+        <p>Based on the analysis, the following actions are recommended:</p>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Action</th>
+                <th>Source Range(s)</th>
+                <th>Destination Range</th>
+                <th>Result</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Merge</td>
+                <td>192.168.1.0/25 + 192.168.1.128/25</td>
+                <td>192.168.1.0/24</td>
+                <td>Fully utilized</td>
+            </tr>
+            <tr>
+                <td>Reallocate</td>
+                <td>192.168.2.0/24</td>
+                <td>192.168.1.128/25</td>
+                <td>Freed /24 block</td>
+            </tr>
+            <tr>
+                <td>Free</td>
+                <td>192.168.3.0/24</td>
+                <td>-</td>
+                <td>Available for allocation</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Freed /24 Blocks -->
+    <div class="block">
+        <h3>Step 3: Freed /24 Blocks</h3>
+        <p>The following /24 blocks are now available for reallocation:</p>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Freed Range</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>192.168.2.0/24</td>
+                <td>Ready for allocation</td>
+            </tr>
+            <tr>
+                <td>192.168.3.0/24</td>
+                <td>Ready for allocation</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Apply and Confirm -->
+    <div class="block">
+        <h3>Step 4: Apply and Confirm</h3>
+        <p>Once confirmed, the renumbering plan will be implemented.</p>
+        <button class="btn btn-success">Confirm and Apply</button>
+        <button class="btn btn-secondary">Edit Plan</button>
+    </div>
+</div>
+
+<div class="footer">
+    &copy; 2025 OneLIR. All rights reserved.
+</div>
+</body>
+</html>

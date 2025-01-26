@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Utilization Details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+        }
+
+        .block {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .block h3 {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>IP Utilization Details</h1>
+    <p>Details for Range: 192.168.1.0/24</p>
+</div>
+<div class="container">
+    <!-- Occupied IP Addresses -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/ip_optimization_with_revenue.html">IP Optimization</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Ip utilization</li>
+        </ol>
+    </nav>
+    <div class="block">
+        <h3>Occupied IP Addresses</h3>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>IP Address</th>
+                <th>Device/Service</th>
+                <th>Status</th>
+                <th>Router Link</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>192.168.1.1</td>
+                <td>Router A</td>
+                <td>Active</td>
+                <td><a href="http://192.168.1.1" target="_blank">View Router</a></td>
+            </tr>
+            <tr>
+                <td>192.168.1.5</td>
+                <td>Server C</td>
+                <td>Active</td>
+                <td><a href="http://192.168.1.5" target="_blank">View Device</a></td>
+            </tr>
+            <tr>
+                <td>192.168.1.20</td>
+                <td>Workstation</td>
+                <td>Active</td>
+                <td><a href="http://192.168.1.20" target="_blank">View Device</a></td>
+            </tr>
+            <tr>
+                <td>192.168.1.50</td>
+                <td>Database Server</td>
+                <td>Active</td>
+                <td><a href="http://192.168.1.50" target="_blank">View Device</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Available IP Addresses -->
+    <div class="block">
+        <h3>Available IP Addresses</h3>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>IP Address</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>192.168.1.100</td>
+                <td>Available</td>
+            </tr>
+            <tr>
+                <td>192.168.1.150</td>
+                <td>Available</td>
+            </tr>
+            <tr>
+                <td>192.168.1.200</td>
+                <td>Available</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Summary Section -->
+    <div class="block">
+        <h3>Summary</h3>
+        <p>Total IPs in Range: 256</p>
+        <p>Occupied: 4</p>
+        <p>Available: 252</p>
+        <p>Utilization: 1.56%</p>
+    </div>
+</div>
+
+<div class="footer">
+    &copy; 2025 OneLIR. All rights reserved.
+</div>
+</body>
+</html>

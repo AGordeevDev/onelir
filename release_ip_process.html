@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Release IP Address</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .header {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      margin-top: 20px;
+    }
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      background-color: #343a40;
+      color: white;
+      padding: 10px;
+    }
+    .block {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .block h3 {
+      margin-bottom: 15px;
+    }
+    .process-log {
+      max-height: 200px;
+      overflow-y: auto;
+      background-color: #f8f9fa;
+      border: 1px solid #ddd;
+      padding: 10px;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Release IP Address</h1>
+    <p>Visualize and execute the IP release process step by step.</p>
+  </div>
+  <div class="container">
+        <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/ip_optimization_with_revenue.html">IP Optimization</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Release IP Address</li>
+
+        </ol>
+    </nav>
+    <!-- IP Release Form -->
+    <div class="block">
+      <h3>Release IP Address</h3>
+      <form id="release-ip-form">
+        <div class="mb-3">
+          <label for="ip-address" class="form-label">IP Address to Release</label>
+          <input type="text" class="form-control" id="ip-address" placeholder="192.168.3.5" required>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="startReleaseProcess()">Start Release Process</button>
+      </form>
+    </div>
+
+    <!-- Process Visualization -->
+    <div class="block">
+      <h3>Process Log</h3>
+      <div id="process-log" class="process-log">
+        <!-- Logs will appear here dynamically -->
+      </div>
+    </div>
+
+    <!-- Process Status -->
+    <div class="block">
+      <h3>Status</h3>
+      <p id="status-message" class="text-secondary">Awaiting user action...</p>
+    </div>
+  </div>
+  <div class="footer">
+    &copy; 2025 OneLIR. All rights reserved.
+  </div>
+
+  <script>
+    function logMessage(message, isError = false) {
+      const logElement = document.getElementById("process-log");
+      const statusMessage = document.getElementById("status-message");
+      const logEntry = document.createElement("div");
+      logEntry.textContent = message;
+      logEntry.style.color = isError ? "red" : "black";
+      logElement.appendChild(logEntry);
+      logElement.scrollTop = logElement.scrollHeight; // Auto-scroll to the bottom
+      statusMessage.textContent = isError ? "Process failed!" : message;
+      if (isError) statusMessage.style.color = "red";
+    }
+
+    function startReleaseProcess() {
+      const ipAddress = document.getElementById("ip-address").value;
+      if (!ipAddress) {
+        logMessage("Error: Please provide a valid IP address.", true);
+        return;
+      }
+
+      logMessage(`Starting release process for IP: ${ipAddress}`);
+
+      // Step 1: Check if IP is active (mock simulation)
+      setTimeout(() => {
+        logMessage(`Step 1: Checking if IP ${ipAddress} is active...`);
+        const isActive = Math.random() < 0.5; // Randomly simulate if IP is active
+        if (isActive) {
+          logMessage(`Error: IP ${ipAddress} is still active. Cannot release.`, true);
+          return;
+        }
+
+        // Step 2: Remove IP from configuration
+        setTimeout(() => {
+          logMessage(`Step 2: Removing IP ${ipAddress} from configuration...`);
+          // Mock success
+          setTimeout(() => {
+            logMessage(`Step 3: Logging IP release for audit...`);
+            
+            // Final step: Confirm success
+            setTimeout(() => {
+              logMessage(`Step 4: IP ${ipAddress} released successfully!`);
+              document.getElementById("status-message").style.color = "green";
+            }, 1000);
+          }, 1000);
+        }, 1000);
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renumbering Module</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+        }
+
+        .block {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .block h3 {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Renumbering Module</h1>
+    <p>Manage and optimize your IP address ranges.</p>
+</div>
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/ip_optimization_with_revenue.html">IP Optimization</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Renumbering Module</li>
+        </ol>
+    </nav>
+    <!-- Dependencies Section -->
+    <div class="block">
+        <h3>Dependencies</h3>
+        <p>This module relies on the following components:</p>
+        <ul class="list-group">
+            <li class="list-group-item">Analytics Module</li>
+            <li class="list-group-item">Database Integration</li>
+        </ul>
+    </div>
+
+    <!-- Renumbering Options -->
+    <div class="block">
+        <h3>Renumbering Options</h3>
+        <p>Select an action to optimize IP ranges:</p>
+        <ul class="list-group">
+            <li class="list-group-item">Merge fragmented ranges</li>
+            <li class="list-group-item">Free unused IPs</li>
+            <li class="list-group-item">Reallocate subnets</li>
+        </ul>
+        <a href="/generate_renumbering_plan.html" class="btn btn-primary mt-2">Generate Renumbering Plan</a>
+    </div>
+
+    <!-- Preview Plan -->
+    <div class="block">
+        <h3>Preview Renumbering Plan</h3>
+        <p>Review the generated plan before applying:</p>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Action</th>
+                <th>Range</th>
+                <th>Reason</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Merge</td>
+                <td>192.168.1.0/25 and 192.168.1.128/25</td>
+                <td>Reduce fragmentation</td>
+            </tr>
+            <tr>
+                <td>Free</td>
+                <td>192.168.3.0/24</td>
+                <td>No active use</td>
+            </tr>
+            <tr>
+                <td>Reallocate</td>
+                <td>192.168.2.0/24</td>
+                <td>Improve utilization</td>
+            </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-success mt-2">Apply Plan</button>
+    </div>
+</div>
+
+<div class="footer">
+    &copy; 2025 OneLIR. All rights reserved.
+</div>
+</body>
+</html>

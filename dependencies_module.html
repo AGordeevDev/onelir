@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dependencies Module</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .header {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      margin-top: 20px;
+    }
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      background-color: #343a40;
+      color: white;
+      padding: 10px;
+    }
+    .block {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .block h3 {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Dependencies Module</h1>
+    <p>Manage and integrate your network devices.</p>
+  </div>
+  <div class="container">
+    <!-- API Integration -->
+     <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/ip_monitoring.html">Ip Monitoring</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Dependencies Module</li>
+        </ol>
+    </nav>
+    <div class="block">
+      <h3>API Integration with Routers</h3>
+      <p>Connect your routers via API for real-time data exchange:</p>
+      <ul class="list-group">
+        <li class="list-group-item">Enter API endpoint and credentials.</li>
+        <li class="list-group-item">Configure connection settings.</li>
+        <li class="list-group-item">Test API connectivity.</li>
+      </ul>
+      <a href="/add_router.html" class="btn btn-primary mt-2">Add Router API</a>
+    </div>
+
+    <!-- SNMP Integration -->
+    <div class="block">
+      <h3>SNMP Monitoring</h3>
+      <p>Enable SNMP to monitor the status of your devices:</p>
+      <ul class="list-group">
+        <li class="list-group-item">Enter SNMP community strings and IP address.</li>
+        <li class="list-group-item">Configure polling intervals and alert thresholds.</li>
+        <li class="list-group-item">Test SNMP connectivity.</li>
+      </ul>
+      <a href="/add_snmp_device.html" class="btn btn-secondary mt-2">Add SNMP Device</a>
+    </div>
+
+    <!-- NetFlow/IPFIX -->
+    <div class="block">
+      <h3>NetFlow/IPFIX Configuration</h3>
+      <p>Set up NetFlow or IPFIX for traffic analysis:</p>
+      <ul class="list-group">
+        <li class="list-group-item">Enter exporter IP and port details.</li>
+        <li class="list-group-item">Specify flow sampling rate.</li>
+        <li class="list-group-item">Test flow export functionality.</li>
+      </ul>
+      <a href="/add_flow_exporter.html" class="btn btn-success mt-2">Add Flow Exporter</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 OneLIR. All rights reserved.
+  </div>
+</body>
+</html>

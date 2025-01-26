@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IP Monitoring</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    .header {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      margin-top: 20px;
+    }
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      background-color: #343a40;
+      color: white;
+      padding: 10px;
+    }
+    .block {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .block h3 {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>IP Monitoring</h1>
+    <p>Track and visualize your network data efficiently.</p>
+  </div>
+  <div class="container">
+    <!-- Monitoring Dashboard -->
+    <div class="block">
+      <h3>Monitoring Dashboard</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>IP Address</th>
+            <th>Status</th>
+            <th>Utilization (%)</th>
+            <th>Last Updated</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ ip.address }}</td>
+            <td>{{ ip.status }}</td>
+            <td>{{ ip.utilization }}</td>
+            <td>{{ ip.lastUpdated }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Traffic Statistics -->
+    <div class="block">
+      <h3>Traffic Statistics</h3>
+      <p>Overview of traffic flow across subnets:</p>
+      <ul class="list-group">
+        <li class="list-group-item">Subnet: {{ traffic.subnet }} - Traffic: {{ traffic.traffic }} MB</li>
+      </ul>
+    </div>
+
+    <!-- Interface Load -->
+    <div class="block">
+      <h3>Interface Load</h3>
+      <p>Monitor the load on network interfaces:</p>
+      <ul class="list-group">
+        <li class="list-group-item">Interface: {{ interface.name }} - Load: {{ interface.load }}%</li>
+      </ul>
+    </div>
+
+    <!-- Subnet Utilization Chart -->
+    <div class="block">
+      <h3>Subnet Utilization Chart</h3>
+      <canvas id="subnetUtilizationChart" style="max-width: 600px; margin: auto;"></canvas>
+      <div class="mt-4">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Subnet</th>
+              <th>Utilization (%)</th>
+              <th>Available IPs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>192.168.1.0/24</td>
+              <td>80%</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td>192.168.2.0/24</td>
+              <td>60%</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>192.168.3.0/24</td>
+              <td>30%</td>
+              <td>175</td>
+            </tr>
+            <tr>
+              <td>192.168.4.0/24</td>
+              <td>50%</td>
+              <td>128</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Data Collection -->
+    <div class="block">
+      <h3>Data Collection</h3>
+      <p>Manage data collection sources and logs:</p>
+      <ul class="list-group">
+        <li class="list-group-item">
+          Source: Router A (SNMP Enabled)
+          <button class="btn btn-sm btn-primary float-end">Collect Data</button>
+        </li>
+        <li class="list-group-item">
+          Source: Router B (NetFlow/IPFIX Enabled)
+          <button class="btn btn-sm btn-primary float-end">Collect Data</button>
+        </li>
+        <li class="list-group-item">
+          Source: Router C (BGP Enabled)
+          <button class="btn btn-sm btn-primary float-end">Collect Data</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Collection Logs -->
+    <div class="block">
+      <h3>Collection Logs</h3>
+      <p>No data collection logs available yet.</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 OneLIR. All rights reserved.
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Render the Subnet Utilization Chart
+    const ctx = document.getElementById('subnetUtilizationChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['192.168.1.0/24', '192.168.2.0/24', '192.168.3.0/24', '192.168.4.0/24'],
+        datasets: [{
+          label: 'Utilization (%)',
+          data: [80, 60, 30, 50],
+          backgroundColor: [
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(255, 99, 132, 0.6)'
+          ],
+          borderColor: [
+            'rgba(75, 192, 192, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(255, 99, 132, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100
+          }
+        },
+        plugins: {
+          legend: {
+            display: false
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

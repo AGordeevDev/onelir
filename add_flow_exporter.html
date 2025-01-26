@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Flow Exporter</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+        }
+
+        .block {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .block h3 {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>Add Flow Exporter</h1>
+    <p>Configure a new NetFlow/IPFIX exporter for monitoring and data collection.</p>
+</div>
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item"><a href="/ip_monitoring.html">Ip Monitoring</a></li>
+            <li class="breadcrumb-item"><a href="/dependencies_module.html">Dependencies Module</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add New Flow Exporter</li>
+        </ol>
+    </nav>
+    <!-- Add Flow Exporter Form -->
+    <div class="block">
+        <h3>Add New Flow Exporter</h3>
+        <form id="add-flow-exporter-form">
+            <div class="mb-3">
+                <label for="exporter-ip" class="form-label">Exporter IP Address</label>
+                <input type="text" class="form-control" id="exporter-ip" placeholder="192.168.1.3" required>
+            </div>
+            <div class="mb-3">
+                <label for="exporter-port" class="form-label">Port</label>
+                <input type="number" class="form-control" id="exporter-port" placeholder="2055" required>
+            </div>
+            <div class="mb-3">
+                <label for="flow-protocol" class="form-label">Protocol</label>
+                <select class="form-select" id="flow-protocol" required>
+                    <option value="NetFlow">NetFlow</option>
+                    <option value="IPFIX">IPFIX</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="exporter-description" class="form-label">Description</label>
+                <input type="text" class="form-control" id="exporter-description"
+                       placeholder="e.g., Core Router Flow Exporter" required>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="testFlowExporterConnection()">Test Connection
+            </button>
+            <button type="submit" class="btn btn-success">Add Exporter</button>
+        </form>
+    </div>
+
+    <!-- Flow Exporter List -->
+    <div class="block">
+        <h3>Managed Flow Exporters</h3>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Exporter IP</th>
+                <th>Port</th>
+                <th>Protocol</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody id="flow-exporter-list">
+            <tr>
+                <td>192.168.1.3</td>
+                <td>2055</td>
+                <td>NetFlow</td>
+                <td>Core Router Flow Exporter</td>
+                <td>Online</td>
+                <td>
+                    <button class="btn btn-warning btn-sm">Edit</button>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="footer">
+    &copy; 2025 OneLIR. All rights reserved.
+</div>
+
+<script>
+    function testFlowExporterConnection() {
+        alert("Testing connection to the flow exporter...");
+        // Simulate connection test
+        setTimeout(() => alert("Flow exporter connection successful!"), 1000);
+    }
+</script>
+</body>
+</html>

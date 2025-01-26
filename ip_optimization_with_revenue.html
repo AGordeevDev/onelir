@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Optimization</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+        }
+
+        .block {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .block h3 {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <h1>IP Optimization</h1>
+    <p>Analyze and optimize your IP resources efficiently.</p>
+</div>
+<div class="container">
+    <!-- Fragmented Ranges -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">IP Optimization</li>
+        </ol>
+    </nav>
+    <div class="block">
+        <h3>Fragmented IP Ranges</h3>
+        <p>Identify and merge fragmented IP address ranges:</p>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Range</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>192.168.1.0/25</td>
+                <td>Fragmented</td>
+                <td>
+                    <a href="/ip_utilization_details_separated.html" class="btn btn-primary btn-sm">Optimize</a>
+                </td>
+            </tr>
+            <tr>
+                <td>192.168.2.0/26</td>
+                <td>Fragmented</td>
+                <td>
+                    <a href="/ip_utilization_details_separated.html" class="btn btn-primary btn-sm">Optimize</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <a href="/renumbering_module.html" class="btn btn-primary mt-3">Go to Renumbering Module</a>
+    </div>
+
+    <!-- Potential Free IPs -->
+    <div class="block">
+        <h3>Potentially Free IPs</h3>
+        <p>Review IP addresses that can be released:</p>
+        <ul class="list-group">
+            <li class="list-group-item">IP: 192.168.5.10 <a href="/release_ip_process.html"
+                                                            class="btn btn-danger btn-sm float-end">Release</a></li>
+            <li class="list-group-item">IP: 192.168.6.20 <a href="/release_ip_process.html"
+                                                            class="btn btn-danger btn-sm float-end">Release</a></li>
+        </ul>
+    </div>
+
+    <!-- Optimization Recommendations -->
+    <div class="block">
+        <h3>Optimization Recommendations</h3>
+        <p>Suggested actions to improve IP usage:</p>
+        <ul class="list-group">
+            <li class="list-group-item">Consolidate smaller subnets into larger blocks
+                <button class="btn btn-success btn-sm float-end">Apply</button>
+            </li>
+            <li class="list-group-item">Free unused IPs for reallocation
+                <button class="btn btn-success btn-sm float-end">Apply</button>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Revenue Potential -->
+    <div class="block">
+        <h3>Revenue Potential</h3>
+        <p>Estimate potential revenue from unused IP addresses:</p>
+        <ul class="list-group">
+            <li class="list-group-item">Estimated Revenue: $500/month from 10 unused IPs</li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer">
+    &copy; 2025 OneLIR. All rights reserved.
+</div>
+</body>
+</html>
