@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OneLIR - Manage IP resources and access marketplace services.">
+  <meta name="keywords" content="IP Monitoring, IP Marketplace, Subnet Optimization, Networking">
+  <title>OneLIR Portal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #343a40;
+    }
+    .navbar {
+      background-color: #343a40;
+    }
+    .navbar .navbar-brand, .navbar .nav-link {
+      color: white !important;
+    }
+    .hero-section {
+      background-color: #343a40;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .hero-section h1 {
+      font-size: 3rem;
+    }
+    .hero-section p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+    .login-register-block, .news-block, .statistics-block, .map-block, .testimonials-block, .integrations-block {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      margin: 30px auto;
+      width: 80%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .statistics-block .stat-card {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      margin: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">OneLIR</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1>Welcome to OneLIR Portal</h1>
+    <p>Your ultimate platform for managing IP resources, monitoring, and marketplace solutions.</p>
+  </div>
+
+  <!-- Login/Register Block -->
+  <div class="login-register-block">
+    <h3>Access Your Account</h3>
+    <p>Login or register to get started with managing your IP resources.</p>
+    <a href="login.html" class="btn btn-outline-primary btn-lg">Login</a>
+    <a href="register.html" class="btn btn-primary btn-lg">Register</a>
+  </div>
+
+  <!-- News/Updates Block -->
+  <div class="news-block">
+    <h3>Latest Updates</h3>
+    <p>Check out the latest features and announcements on OneLIR.</p>
+    <ul>
+      <li>New subnet optimization tool released!</li>
+      <li>Marketplace updated with regional pricing.</li>
+      <li>Improved IP monitoring dashboard.</li>
+    </ul>
+  </div>
+
+  <!-- Statistics Block -->
+  <div class="statistics-block">
+    <h3>Platform Statistics</h3>
+    <div class="d-flex justify-content-around flex-wrap">
+      <div class="stat-card">
+        <h4>500+</h4>
+        <p>IP Addresses Managed</p>
+      </div>
+      <div class="stat-card">
+        <h4>300+</h4>
+        <p>Active Users</p>
+      </div>
+      <div class="stat-card">
+        <h4>50+</h4>
+        <p>Regions Supported</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Map Block -->
+  <div class="map-block">
+    <h3>Regional Registries</h3>
+    <p>Explore the major internet registries:</p>
+    <a href="https://www.ripe.net/" target="_blank" class="btn btn-outline-primary">RIPE NCC</a>
+    <a href="https://www.arin.net/" target="_blank" class="btn btn-outline-primary">ARIN</a>
+    <a href="https://www.apnic.net/" target="_blank" class="btn btn-outline-primary">APNIC</a>
+  </div>
+
+  <!-- Testimonials Block -->
+  <div class="testimonials-block">
+    <h3>What Our Users Say</h3>
+    <blockquote>
+      "OneLIR has streamlined our IP management process. Highly recommended!"
+    </blockquote>
+    <cite>- Alex Johnson, Network Engineer</cite>
+  </div>
+
+  <!-- Integrations Block -->
+  <div class="integrations-block">
+    <h3>Integrations</h3>
+    <p>Seamlessly integrate with popular tools:</p>
+    <ul>
+      <li>SNMP Monitoring</li>
+      <li>NetFlow Traffic Analysis</li>
+      <li>BGP Routing</li>
+    </ul>
+  </div>
+
+  <!-- Footer with Social Links -->
+  <div class="footer">
+    <p>&copy; 2025 OneLIR. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+      <a href="https://twitter.com" target="_blank">Twitter</a>
+      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
