@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OneLIR - Manage IP resources and access marketplace services.">
+  <meta name="keywords" content="IP Monitoring, IP Marketplace, Subnet Optimization">
+  <title>OneLIR Portal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #343a40;
+    }
+    .navbar {
+      background-color: #343a40;
+    }
+    .navbar .navbar-brand, .navbar .nav-link {
+      color: white !important;
+    }
+    .hero-section {
+      background-color: #343a40;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .hero-section h1 {
+      font-size: 3rem;
+    }
+    .hero-section p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+    }
+    .container .features {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    .feature-block {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      flex: 1 1 30%;
+      margin: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    .feature-block:hover {
+      transform: translateY(-5px);
+    }
+    .user-block {
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+      margin: 30px auto;
+      width: 60%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .user-block img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .footer {
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">OneLIR</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1>Welcome to OneLIR Portal</h1>
+    <p>Your ultimate platform for managing IP resources, monitoring, and marketplace solutions.</p>
+  </div>
+
+  <!-- User Info Block -->
+  <div class="user-block">
+    <img src="user_logo.png" alt="User Photo">
+    <h3>John Doe</h3>
+    <p>Welcome back! Manage your IP resources efficiently.</p>
+    <a href="profile.html" class="btn btn-outline-primary">View Profile</a>
+    <a href="logout.html" class="btn btn-danger">Logout</a>
+  </div>
+
+  <!-- Features Section -->
+  <div class="container">
+    <div class="features">
+      <div class="feature-block">
+        <h3>IP Monitoring</h3>
+        <p>Track and analyze your IP usage and traffic statistics.</p>
+        <a href="ip_monitoring.html" class="btn btn-outline-primary">Explore Monitoring</a>
+      </div>
+      <div class="feature-block">
+        <h3>Subnet Upload</h3>
+        <p>Upload your subnet data for easy analysis and management.</p>
+        <a href="upload_subnets.html" class="btn btn-outline-primary">Upload Subnets</a>
+      </div>
+      <div class="feature-block">
+        <h3>IP Optimization</h3>
+        <p>Optimize your IP ranges for better performance and utilization.</p>
+        <a href="ip_optimization_with_revenue.html" class="btn btn-outline-primary">Optimize Now</a>
+      </div>
+      <div class="feature-block">
+        <h3>IP Marketplace</h3>
+        <p>Buy or rent IP addresses conveniently on our marketplace.</p>
+        <a href="ip_marketplace.html" class="btn btn-outline-primary">Visit Marketplace</a>
+      </div>
+      <div class="feature-block">
+        <h3>Support</h3>
+        <p>Need help? Our team is here to assist you with any issues.</p>
+        <a href="support.html" class="btn btn-outline-primary">Contact Support</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 2025 OneLIR. All rights reserved.
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
